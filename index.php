@@ -20,64 +20,26 @@ Il cliente effettua il pagamento dei prodotti nel **carrello** con la **carta
 
 <?php
 
-
-class Product {
-    public $title;
-    public $price;
-    public $type;
-    public $color;
-
-
-    function __construct ($title, $price, $type, $color) {
-        $this->setTitle($title);
-        $this->setPrice($price);
-        $this->setType($type);
-        $this->setColor($color);
-    }
-    
-    public function getTitle(){
-        return $this -> title;
-    }
-    public function setTitle($title){
-         $this -> title = $title;
-    }
-    public function getPrice(){
-        return $this -> price;
-    }
-    public function setPrice($price){
-         $this -> price = $price;
-    }
-    public function getType(){
-        return $this -> type;
-    }
-    public function setType($type){
-         $this -> type = $type;
-    }
-    public function getColor(){
-        return $this -> color;
-    }
-    public function setColor($color){
-         $this -> color = $color;
-    }
- 
-}
-
-class Categories extends Products {
-    public $prodottoper;
-}
-$cuccia = new Product ("Cuccia Modulare per Border Collie", "179 euro", "accessorio per cani", "Color Legno");
-
-
-// Prova della funzione Set title 
-$cuccia -> setTitle ("Cuccia Modulare per Border Collie");
-
-echo "Prodotto: " . $cuccia->getTitle();
-echo "<br>------------------------------<br>";
-echo "Prezzo: " . $cuccia->getPrice();
-echo "<br>------------------------------<br>";
-echo "Tipologia: " . $cuccia->getType();
-echo "<br>------------------------------<br>";
-echo "Colore: " . $cuccia->getColor();
-
+require_once (__DIR__ . "/product.php");
+require_once (__DIR__ . "/categories.php");
+require_once (__DIR__ . "/db.php");
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il mio E-Commerce</title>
+</head>
+<body>
+    <ul>
+        <?php foreach ($articoli as $articolo) { ?>
+        <li>
+            <?php echo $articolo->getTitle(); ?>
+        </li>
+        <?php } ?>
+    </ul>
+</body>
+</html>
