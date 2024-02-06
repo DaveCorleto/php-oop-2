@@ -27,44 +27,57 @@ class Product {
     public $type;
     public $color;
 
-function __construct ($title, $price, $type, $color){
-    $this -> setTitle ($title);
-    $this -> setPrice  ($price);
-    $this -> setType  ($type);
-    $this -> setColor  ($color);
+
+    function __construct ($title, $price, $type, $color) {
+        $this->setTitle($title);
+        $this->setPrice($price);
+        $this->setType($type);
+        $this->setColor($color);
+    }
+    
+    public function getTitle(){
+        return $this -> title;
+    }
+    public function setTitle($title){
+         $this -> title = $title;
+    }
+    public function getPrice(){
+        return $this -> price;
+    }
+    public function setPrice($price){
+         $this -> price = $price;
+    }
+    public function getType(){
+        return $this -> type;
+    }
+    public function setType($type){
+         $this -> type = $type;
+    }
+    public function getColor(){
+        return $this -> color;
+    }
+    public function setColor($color){
+         $this -> color = $color;
+    }
+ 
 }
 
-
-public function getTitle(){
-    return $this -> title;
+class Categories extends Products {
+    public $prodottoper;
 }
-public function setTitle(){
-     $this -> title = $title;
-}
-public function getPrice(){
-    return $this -> price;
-}
-public function setPrice(){
-     $this -> price = $price;
-}
-public function getType(){
-    return $this -> type;
-}
-public function setType(){
-     $this -> type = $type;
-}
-public function getColor(){
-    return $this -> color;
-}
-public function setColor(){
-     $this -> color = $color;
-}
-
-
-
-}
-
 $cuccia = new Product ("Cuccia Modulare per Border Collie", "179 euro", "accessorio per cani", "Color Legno");
-var_dump ($cuccia);
+
+
+// Prova della funzione Set title 
+$cuccia -> setTitle ("Cuccia Modulare per Border Collie");
+
+echo "Prodotto: " . $cuccia->getTitle();
+echo "<br>------------------------------<br>";
+echo "Prezzo: " . $cuccia->getPrice();
+echo "<br>------------------------------<br>";
+echo "Tipologia: " . $cuccia->getType();
+echo "<br>------------------------------<br>";
+echo "Colore: " . $cuccia->getColor();
+
 
 ?>
