@@ -36,6 +36,15 @@ require_once (__DIR__ . "/db.php");
     <title>Il mio E-Commerce</title>
 </head>
 <body>
+    <?php
+        try {
+            // Chiamata al metodo setPrice() dell'oggetto $product
+            $scatoletta->setPrice(0);
+        } catch (Exception $e) {
+            // Gestione dell'eccezione se viene lanciata
+            echo 'Eccezione: ' . $e->getMessage();
+        }
+    ?>
     <ul>
         <?php foreach ($articoli as $articolo) { ?>
         <li>
@@ -59,5 +68,6 @@ require_once (__DIR__ . "/db.php");
         <br><br>
         <?php } ?>
     </ul>
+
 </body>
 </html>

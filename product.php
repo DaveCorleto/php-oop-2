@@ -30,8 +30,12 @@ class Product {
     public function getPrice(){
         return $this -> price;
     }
+    // SetPrice con l'uso di una Exception 
     public function setPrice($price){
-         $this -> price = $price;
+        if ($price < 1) {
+            throw new Exception("Il prezzo non può essere inferiore a 1 euro");
+        }
+        $this->price = $price;
     }
     public function getType(){
         return $this -> type;
