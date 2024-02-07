@@ -27,10 +27,5 @@ class Categories {
     }
 }
 
-// Categories 
-
-$gatto = new Categories ("gatto", "icona-gatto");
-$coniglio = new Categories ("coniglio", "icona-coniglio");
-$cane = new Categories ("cane", "icona-cane");
 
 ?>

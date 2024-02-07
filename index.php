@@ -19,9 +19,8 @@ Il cliente effettua il pagamento dei prodotti nel **carrello** con la **carta
 
 
 <?php
-
-require_once (__DIR__ . "/product.php");
 require_once (__DIR__ . "/categories.php");
+require_once (__DIR__ . "/product.php");
 require_once (__DIR__ . "/db.php");
 
 ?>
