@@ -39,6 +39,16 @@ require_once (__DIR__ . "/db.php");
         <li>
             <?php echo $articolo->getTitle(); ?>
         </li>
+        <li>
+            <?php echo $articolo->getPrice(); ?>
+        </li>
+        <li>
+            <?php echo $articolo->getColor(); ?>
+        </li>
+        <li>
+            <img src="<?php echo $articolo -> getImage() ?>"  width="100" />
+        </li>
+        <br>---------------<br>
         <?php } ?>
     </ul>
 </body>
