@@ -28,6 +28,9 @@ require_once (__DIR__ . "/db.php");
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Importo il CSS  -->
+
+    <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Il mio E-Commerce</title>
@@ -45,9 +48,15 @@ require_once (__DIR__ . "/db.php");
             <?php echo $articolo->getColor(); ?>
         </li>
         <li>
-            <img src="<?php echo $articolo -> getImage() ?>"  width="100" />
+            <img src="<?php echo $articolo -> getImage() ?>"  width="300" />
         </li>
-        <br>---------------<br>
+        <li>
+        <img src="<?php echo $articolo -> getCategories() -> getIcon() ?>"  width="30" />
+        <?php
+            echo $articolo -> getCategories() -> getName();
+        ?>
+        </li>
+        <br><br>
         <?php } ?>
     </ul>
 </body>

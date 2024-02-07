@@ -1,0 +1,17 @@
+body {
+    background-color: rgb(156, 20, 20);
+}
+
+ul {
+    list-style: none; 
+}
+
+li {
+    margin: auto;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+img {
+    margin: auto;
+}
